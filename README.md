@@ -1,50 +1,53 @@
-# Welcome to your Expo app 👋
+# Event Ticketing App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple event ticketing application where users can view events and purchase tickets.
 
-## Get started
+## Project Overview
 
-1. Install dependencies
+This React Native application (using Expo Router) allows users to:
+- View a list of upcoming events
+- See event details
+- Purchase tickets for events
+- View order confirmation
 
-   ```bash
-   npm install
-   ```
+### Features
 
-2. Start the app
+- View all events with name, date, location, and ticket availability
+- View detailed information about each event
+- Select quantity of tickets to purchase
+- See "Sold Out" status for events with no available tickets
+- Receive order confirmation with order number, event details, and purchase summary
 
-   ```bash
-    npx expo start
-   ```
+## Mock Data Version
 
-In the output, you'll find options to open the app in a
+This is a frontend-only version that uses mock data instead of an actual backend. All data and operations are simulated within the app.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Design Decisions
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+1. **State Management**: Used React Context API for state management. This provides a simple and effective way to manage application state, while being easy to replace with Redux if needed in the future.
 
-## Get a fresh project
+2. **Routing**: Used Expo Router for file-based routing, which simplifies navigation and route management compared to React Navigation.
 
-When you're ready, run:
+3. **Mock Data Structure**: Created mock data that simulates what would be returned from a backend API.
 
+4. **UI Flow**: Implemented a natural flow from event list → event details → purchase → confirmation.
+
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js (v14 or newer)
+- npm or yarn
+- Expo CLI (`npm install -g expo-cli`)
+
+### Installation
+
+1. Clone the repository
 ```bash
-npm run reset-project
+cd event-ticketing-app
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+2. Install dependencies
+```bash
+npm install
+# or# event-ticketing-front-end
